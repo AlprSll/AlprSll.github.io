@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- DEĞİŞTİR: Sayfa başlığı -->
+<title>Ad Soyad | CV</title>
+<meta name="description" content="Ad Soyad - Kişisel CV web sitesi">
+<style>
+  :root {
+    --bg: #f7f7fb;
+    --card: #ffffff;
+    --text: #1f2430;
+    --muted: #5d6475;
+    --accent: #4f46e5;
+    --border: #e5e7ef;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0f1117;
+      --card: #181b24;
+      --text: #eceef5;
+      --muted: #9aa1b5;
+      --accent: #8b87ff;
+      --border: #2a2f3d;
+    }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  nav {
+    position: sticky; top: 0; z-index: 10;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    display: flex; gap: 20px; justify-content: center;
+    padding: 12px 16px; flex-wrap: wrap;
+  }
+  nav a { color: var(--muted); font-weight: 500; font-size: 0.95rem; }
+  nav a:hover { color: var(--accent); text-decoration: none; }
+
+  header {
+    text-align: center;
+    padding: 64px 20px 40px;
+  }
+  .avatar {
+    width: 130px; height: 130px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--accent), #ec4899);
+    color: #fff; font-size: 3rem; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    object-fit: cover;
+  }
+  header h1 { font-size: 2.2rem; }
+  header .title { color: var(--accent); font-size: 1.15rem; margin-top: 4px; font-weight: 600; }
+  header .summary { max-width: 620px; margin: 16px auto 0; color: var(--muted); }
+  .links { margin-top: 20px; display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; padding: 10px 18px; border-radius: 999px;
+    border: 1px solid var(--accent); font-weight: 600; font-size: 0.92rem;
+  }
+  .btn.primary { background: var(--accent); color: #fff; }
+  .btn:hover { text-decoration: none; opacity: 0.88; }
+
+  main { max-width: 860px; margin: 0 auto; padding: 0 16px 60px; }
+  section { margin-top: 36px; }
+  section h2 {
+    font-size: 1.4rem; margin-bottom: 16px;
+    padding-bottom: 8px; border-bottom: 2px solid var(--accent);
+    display: inline-block;
+  }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 14px; padding: 18px 20px; margin-bottom: 14px;
+  }
+  .card h3 { font-size: 1.05rem; }
+  .card .meta { color: var(--muted); font-size: 0.88rem; margin-bottom: 6px; }
+  .card ul { margin: 8px 0 0 20px; color: var(--muted); }
+
+  .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+  .skill {
+    background: var(--card); border: 1px solid var(--border);
+    padding: 6px 14px; border-radius: 999px; font-size: 0.9rem;
+  }
+  footer {
+    text-align: center; color: var(--muted); font-size: 0.85rem;
+    padding: 24px 16px 40px; border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#hakkimda">Hakkımda</a>
+  <a href="#egitim">Eğitim</a>
+  <a href="#deneyim">Deneyim</a>
+  <a href="#projeler">Projeler</a>
+  <a href="#yetenekler">Yetenekler</a>
+  <a href="#iletisim">İletişim</a>
+</nav>
+
+<header>
+  <!-- DEĞİŞTİR: Fotoğraf eklemek istersen bu div'i silip şunu kullan:
+       <img class="avatar" src="foto.jpg" alt="Ad Soyad"> -->
+  <!-- <div class="avatar">MAS</div> -->
+    <img class="avatar" src="profil foto.jpeg" alt="Ad Soyad">
+  <h1>Mustafa Alper Sel</h1>
+  <p class="title">Bilgisayar Mühendisliği Öğrencisi</p>
+  <p class="summary" id="hakkimda">
+    Merhaba! Ben Mustafa Alper Sel. Yazılım geliştirme ve web teknolojilerine ilgi duyan, yeni düşüncelere açık ve takım çalışmasına uyumlu bir öğrenciyim.
+  </p>
+  <div class="links">
+    <a class="btn primary" href="mailto:mustafalpersel@mail.com">E-posta Gönder</a>
+    <a class="btn" href="https://github.com/AlprSll" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn" href="https://linkedin.com/in/alpersel" target="_blank" rel="noopener">LinkedIn</a>
+  </div>
+</header>
+
+<main>
+
+  <section id="egitim">
+    <h2>Eğitim</h2>
+    <div class="card">
+      <h3>Afyon Kocatepe Üniversitesi - Bilgisayar Mühendisliği</h3>
+      <div class="meta">2024 – Devam ediyor</div>
+      <p>Not ortalaması - 3.24</p>
+    </div>
+    <!-- <div class="card">
+      <h3>Lise Adı</h3>
+      <div class="meta">2019 – 2023 · Şehir</div>
+    </div> -->
+  </section>
+
+  <section id="deneyim">
+    <h2>Deneyim</h2>
+    <div class="card">
+      <h3>Stajyer – BİMAR Bilgi İşlem - ARKAS</h3>
+      <div class="meta">Temmuz 2026 – Ağustos 2026</div>
+      <ul>
+        <li>BİMAR Bilgi İşlemde 1.5 aylık bir staj dönemi gerçekleştirdim.</li>
+        <li>///////////////////////////</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="projeler">
+    <h2>Projeler</h2>
+    <div class="card">
+      <h3>Proje Adı 1</h3>
+      <div class="meta">HTML · CSS · JavaScript</div>
+      <!-- <p>////////////////////////////////// <a href="#">Proje bağlantısı →</a></p> -->
+    </div>
+    <div class="card">
+      <h3>Proje Adı 2</h3>
+      <div class="meta">Python</div>
+      <!-- <p>////////////////////////////////// <a href="#">Proje bağlantısı →</a></p> -->
+    </div>
+  </section>
+
+  <section id="yetenekler">
+    <h2>Yetenekler</h2>
+    <div class="skills">
+      <span class="skill">HTML / CSS</span>
+      <span class="skill">JavaScript</span>
+      <span class="skill">Python</span>
+      <span class="skill">Git & GitHub</span>
+      <span class="skill">Takım Çalışması</span>
+      <span class="skill">İngilizce (B2)</span>
+    </div>
+  </section>
+
+  <section id="iletisim">
+    <h2>İletişim</h2>
+    <div class="card">
+      <p>📧 <a href="mailto:mustafalpersel@mail.com">mustafalpersel@mail.com</a></p>
+      <p>📍 İzmir, Türkiye</p>
+      <p>💼 <a href="https://linkedin.com/in/alpersel" target="_blank" rel="noopener">linkedin.com/in/alpersel</a></p>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  © <span id="yil"></span> Ad Soyad
+</footer>
+
+<script>
+  document.getElementById("yil").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
